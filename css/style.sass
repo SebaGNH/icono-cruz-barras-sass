@@ -17,3 +17,36 @@ main
     height: 50px
     background: #37a6ff
     cursor: pointer
+    display: flex
+    justify-content: center
+    align-items: center
+    transition: .2s
+    &::before
+        content: ''
+        position: absolute
+        width: 28px
+        height: 2px
+        background: #fff
+        transition: .2s
+        transform: translateY(-10px)
+        box-shadow: 0 10px 0 #fff
+    
+    &::after
+        content: ''
+        position: absolute
+        width: 28px
+        height: 2px
+        background: #fff
+        transition: .2s
+        transform: translateY(10px)
+
+.active
+    background: #f7226a
+    &::before
+        transform: translate(0px) rotate(45deg)
+        box-shadow: 0 0 0 #fff
+        
+    &::after
+        transform: translate(0px) rotate(-45deg)
+        //box-shadow: 0 0 0 #fff
+

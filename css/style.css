@@ -19,6 +19,40 @@ main {
   height: 50px;
   background: #37a6ff;
   cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: 0.2s;
+}
+main::before {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  background: #fff;
+  transition: 0.2s;
+  transform: translateY(-10px);
+  box-shadow: 0 10px 0 #fff;
+}
+main::after {
+  content: "";
+  position: absolute;
+  width: 28px;
+  height: 2px;
+  background: #fff;
+  transition: 0.2s;
+  transform: translateY(10px);
+}
+
+.active {
+  background: #f7226a;
+}
+.active::before {
+  transform: translate(0px) rotate(45deg);
+  box-shadow: 0 0 0 #fff;
+}
+.active::after {
+  transform: translate(0px) rotate(-45deg);
 }
 
 /*# sourceMappingURL=style.css.map */
